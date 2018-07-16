@@ -25,7 +25,8 @@
     "mapbox-gl": "0.11.1",
     "nop": "^1.0.0",
     "object-assign": "^3.0.0",
-    "svg-transform": "0.0.1"
+    "svg-transform": "0.0.1",
+    "snyk": "^1.88.2"
   },
   "devDependencies": {
     "bistre": "^1.0.1",
@@ -40,7 +41,9 @@
     "lint": "uber-standard",
     "test": "npm run lint && prova -q -b -t envify -l chrome test/*",
     "precommit": "npm run lint -s",
-    "prepush": "npm run lint -s"
+    "prepush": "npm run lint -s",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "peerDependencies": {
     "immutable": "^3.7.3",
@@ -50,5 +53,6 @@
   "engines": {
     "node": "0.10.x",
     "npm": "2.x"
-  }
+  },
+  "snyk": true
 }
